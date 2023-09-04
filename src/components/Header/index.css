@@ -1,5 +1,6 @@
 /* Write your CSS code here */
 .header-container {
+  background-color: blanchedalmond;
   display: flex;
   justify-content: space-between;
   align-items: center;

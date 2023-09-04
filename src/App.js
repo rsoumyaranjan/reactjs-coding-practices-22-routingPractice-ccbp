@@ -1,28 +1,26 @@
-.app-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+import {Route, Switch} from 'react-router-dom'
 
-.responsive-container {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  height: 80vh;
-  border: 4px solid #551e53;
-  border-radius: 12px;
-}
+import Header from './components/Header'
+import About from './components/About'
+import Contact from './components/Contact'
+import Home from './components/Home'
+import NotFound from './components/NotFound'
 
-@media (max-width: 576px) {
-  .responsive-container {
-    width: 85%;
-  }
-}
+import './App.css'
 
-.app-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
+const App = () => (
+  <div className="app-container">
+    <div className="resp-cont">
+      <Header />
+      <div className="app-body">
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/contact" component={Contact} />
+          <Route component={NotFound} />
+        </Switch>
+      </div>
+    </div>
+  </div>
+)
+export default App

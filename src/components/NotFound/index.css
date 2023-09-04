@@ -1,5 +1,6 @@
 /* Write your CSS code here */
 .not-found-container {
+  background-color: rgb(235, 78, 78);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,4 +34,9 @@
   .not-found-heading {
     font-size: 48px;
   }
+}
+.notfnd{
+    color: deepskyblue;
+    font-size: 30px;
+    font-weight: 300;
 }
